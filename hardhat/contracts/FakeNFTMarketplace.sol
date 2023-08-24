@@ -15,6 +15,7 @@ contract FakeNFTMarketplace {
     }
 
     function available(uint256 _tokenId) external view returns (bool) {
+        // address(0) = 0x0000000000000000000000000000000000000000
         if (monkeyOwnerAddresses[_tokenId] == address(0)) {
             return true;
         }
